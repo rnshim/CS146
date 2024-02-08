@@ -3,11 +3,11 @@ def bad_version(n):
     if (isBadVersion(index)):
         while isBadVersion(index-1):
             index -= 1
-        return index
+        return int(index)
     else:
         while not isBadVersion(index):
             index += 1
-        return index
+        return int(index)
 
 def isBadVersion(version):
     if (version>=2):

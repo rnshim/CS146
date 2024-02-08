@@ -21,7 +21,7 @@ public class BadVersion {
         return false;
     }
     public static void main(String[] args){
-        System.out.println(bad_version(8));
+        System.out.println(bad_version(3));
         System.out.println(bad_version(11));
     }
 }
