@@ -7,11 +7,11 @@ def insertionSort(arr):
 				j -= 1
 		arr[j + 1] = key
 
-Best Case: iterates through the array once without hitting the while loop
+Best Case: When the array is already sorted, algorithm iterates through the array once without hitting the while loop
 =>O(n)
-Worst Case: iterates through the array and has to sort each subarray every time
-=> n(n+1)/2
+Worst Case: When the array is in reverse order, it iterates through the array and has to sort each subarray every time
+n(n+1)/2
 =>O(n^2)
-Average Case: Assume half of the objects will need to be shifted
-=>n^2/2
+Average Case: Assume half of the objects will need to be shifted, big O stays the same
+O(n^2/2)
 =>O(n^2)
