@@ -10,10 +10,10 @@ MATRIX_MULTIPLY(A, B):
   for i from 1 to rows_A do: 
     for j from 1 to cols_B do: 
     sum ← 0 
-    for k from 1 to cols_A do: 
-      sum ← sum + A[i][k] * B[k][j] 
-    result[i][j] ← sum return result
+      for k from 1 to cols_A do: 
+        sum ← sum + A[i][k] * B[k][j] 
+      result[i][j] ← sum return result
 
 =>O(rows_A*cols_B*cols_A)
 =>O(i*j*k)
-=>O(n^3) if matrixes are squares, O(iXjXk) if not
+=>O(n^3) if matrixes are squares, O(iXjXk) if not (no upper and lower bounds since number of operations are constant and change with the size of the matrices)
