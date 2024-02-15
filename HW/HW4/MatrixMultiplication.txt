@@ -1,0 +1,30 @@
+MATRIX_MULTIPLY(A, B):   1 time (c1)
+  if columns(A) ≠ rows(B):   1 time (c2)
+    raise ValueError("Matrix multiplication is not defined.") 1 time (c3)
+
+  rows_A ← number of rows in A     1 time c4
+  cols_A ← number of columns in A   1 time c5
+  cols_B ← number of columns in B   1 time c6
+  result ← matrix of size rows_A x cols_B filled with zeros  1 time c7
+
+  for i from 1 to rows_A do:   n+1 times c8
+    for j from 1 to cols_B do: n+1 times c9
+    sum ← 0   1 time c10
+      for k from 1 to cols_A do:   n+1 times c11
+        sum ← sum + A[i][k] * B[k][j]   1 time c12
+      result[i][j] ← sum return result  1 time c13
+
+Best Case:
+Upper bound Big O is O(1) if if columns and rows are not equal between A and B or matrices are empty
+Lower bound Big Omega is also O(1)
+=> Θ(1)
+
+Average Case:
+Upper bound Big O is O(n^3) for 3 nested for loops
+Lower bound Big Omega is also O(n^3)
+=> Θ(n^3)
+
+Worst Case:
+Upper bound Big O is O(n^3) for 3 nested for loops
+Lower bound Big Omega is also O(n^3)
+=> Θ(n^3)

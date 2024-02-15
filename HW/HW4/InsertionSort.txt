@@ -1,0 +1,25 @@
+def insertionSort(arr): //1 time (c1)
+	for i in range(1, len(arr)):  //n+1 times (c2)
+		key = arr[i] //1 time (c3)
+		j = i-1  //1 time (c4)
+		while j >= 0 and key < arr[j] : //0 to n-1 times (c5)
+				arr[j + 1] = arr[j] //1 time (c6)
+				j -= 1 //1 time (c7)
+		arr[j + 1] = key  //1 time (c8)
+
+
+Best Case: When the array is already sorted, algorithm iterates through the array once without hitting the while loop
+=>Ω(n)
+=>O(n)
+=>Θ(n)
+
+Average Case: 
+=>O(n^2)
+=>Ω(n)
+Big O and Big Omega are different so no theta exists
+
+Worst Case: When the array is in reverse order, it iterates through the array and has to sort each subarray every time
+n(n+1)/2
+=>O(n^2)
+=>Ω(n^2)
+=>Θ(n^2)
