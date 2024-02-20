@@ -1,0 +1,67 @@
+Problem 1:
+1. T(N) = 2T(N-1) + 1
+recursive tree method:
+           T(N)
+          /     \
+    T(N-1)      T(N-1)
+    /   \        /    \
+T(N-2) T(N-2) T(N-2) T(N-2)
+
+order of growth of f(n) = 2^n
+time complexity Θ(2^n)
+
+2. T(N) = 3T(N-1) + n
+                              T(N)
+                     /         |               \         
+       T(N-1)                T(N-1)                 T(N-1)
+       / |   \              /   |   \             /   |   \
+T(N-2) T(N-2) T(N-2)  T(N-2) T(N-2) T(N-2)   T(N-2)T(N-2) T(N-2) 
+order of growth of f(n)=3^n+n*3^n
+time complexity Θ(n*3^n)
+
+3. T(N) = 9T(N/2) + n^2
+a=9
+b=2
+f(n)=n^2
+using master theorem
+Θ(n^log2(9))
+
+4. T(N) = 100T(N/2) + n^log2cn + 1  (c is a constant)
+a = 100
+b = 2
+f(n) = n^log2cn + 1
+using master theorem
+Θ(n^2 * logn)
+
+5. T(N) = 4T(N/2) + n^2 * logn
+a = 4
+b = 2
+f(n) = n^2 * log2n
+using master theorem
+n^2 * logn vs n^2
+T(n) = Θ(Nlogb(a))
+Θ(n^2)
+
+6. T(N) = 5T(N/2) + n^2 / logn
+a = 5
+b = 2
+f(n) = n^2 / logn
+T(N) is Θ(n^log2(5))
+
+Problem 2:
+yetAnotherFunc(n): 
+  if n > 1: 
+    for(i=0;i<10n;i++)
+      doSomething;
+    yetAnotherFunc(n/2);
+    yetAnotherFunc(n/2);
+
+T(N) {
+    1         n=0
+    2T(N/2)+10N     n>0
+}
+
+master theorem
+a = 2, b=2, f(n)=10n
+10n = nlog2(2)
+T(n)=Θ(nlogn)
