@@ -1,0 +1,13 @@
+sort input array
+loop through the array using a for loop
+have a left and right pointer
+left pointer starts one to the right of loop index
+right pointer starts at last index of array
+if loop index is greater than 0 (aka not on first loop iteration) and the value at i is equal to the left value, then skip through that iteration
+while the left pointer is less than the right, sum up the value at i, left, and right
+if sum is greater than 0 then move the right pointer to the left once
+else if sum is less than 0 then move the left pointer right once
+else make an array with the 3 values and add it to the answer 
+move the left pointer to the right
+check if the left is not a duplicate by checking if the pointer is equal to the left value
+if it is, move the left pointer to the right once
