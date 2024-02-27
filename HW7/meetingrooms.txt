@@ -1,0 +1,6 @@
+declare empty heap
+loop through intervals and assign pointers for start times and end times
+    if heap is not empty and first element is less than or equal to start times
+        pop the top element
+    push the current element into the heap
+return the length of heap - it is the number of servers required
