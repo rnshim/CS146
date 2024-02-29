@@ -1,0 +1,7 @@
+if empty string return 0
+use hashmap to store character, count for each character in the string
+if theres a max odd character, add the count of that to the total
+remove that character from the hashmap
+loop through the map, for every character if the count is odd, add that minus one to the total
+if its even, add the count to the total
+return total
