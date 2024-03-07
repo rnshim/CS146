@@ -1,0 +1,6 @@
+base case for recursive function is if node is null, return null
+assign left tree node var to recursive function for node.left
+assign right tree node var to recursive function for node.right
+assign node left attribute to var left
+assign node right attribute to var right
+return root
