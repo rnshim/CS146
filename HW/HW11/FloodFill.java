@@ -54,7 +54,7 @@ public class FloodFill {
         int[][] l2 = {{0,0,0},{0,0,0}};
 
         int[][] result1 = ff.floodFill(l1, 1, 1, 2);
-        int[][] result2 = ff.floodFill(l2, 0, 0, 1);
+        int[][] result2 = ff.floodFill(l2, 0, 0, 0);
 
         System.out.println("Result 1:");
         for (int[] row : result1) {
