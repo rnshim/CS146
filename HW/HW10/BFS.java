@@ -1,4 +1,4 @@
-package HW.HW10;
+package HW10;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

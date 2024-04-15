@@ -1,4 +1,4 @@
-package HW.HW9;
+package HW9;
 
 public class LCA {
 

@@ -1,4 +1,4 @@
-package HW.HW8;
+package HW8;
 import java.util.HashMap;
 import java.util.Set;
 public class LongestPalindrome {

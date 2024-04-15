@@ -1,4 +1,4 @@
-package HW.HW12;
+package HW12;
 
 public class Water {
     public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {

@@ -1,4 +1,4 @@
-package HW.HW11;
+package HW11;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
