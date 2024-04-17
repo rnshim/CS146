@@ -1,8 +1,7 @@
 from typing import List
 class City:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        INF = float('inf')
-        dist = [[INF] * n for _ in range(n)]
+        dist = [[10000001] * n for _ in range(n)]
         for a, b, weight in edges:
             dist[a][b] = weight
             dist[b][a] = weight
@@ -32,7 +31,7 @@ class City:
 
         for i, val in enumerate(reachable_cities):
             if val == min_reachable:  # Check if the value is equal to the minimum number of reachable cities
-                if min_city == -1 or i > min_city:  # Check if the current index is greater than the previous minimum index
+                if i > min_city:  # Check if the current index is greater than the previous minimum index
                     min_city = i  # If yes, update the index of the city with the minimum number of reachable cities
 
         return min_city
